@@ -115,7 +115,7 @@
 
             call ()
             {
-                window.open( "https://wa.me/27645588356" );
+                window.open( "https://wa.me/27645588365" );
             },
 
 
