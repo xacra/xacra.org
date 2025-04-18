@@ -1,0 +1,7 @@
+{
+    "intake":
+    {
+        "sensorConvey": [ "mousedown", "mouseup", "mousemove", "click", "keydown", "keyup" ],
+        "sensorIdling": 360
+    }
+}

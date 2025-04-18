@@ -1,0 +1,25 @@
+{
+    "launch":
+    {
+        "loadingOrder": 1,
+        "schemeDriver": ["adb"]
+    },
+
+
+    "output":
+    {
+        "bufferTarget": "$/user/device/device.output.log",
+        "limitLogLine": 999,
+        "limitLogSpan": 60,
+        "sectionJoins": "\\t",
+        "joinerNumber": 2
+    },
+
+
+    "permit":
+    {
+        "browseHidden": false,
+        "openSymlinks": true,
+        "systemAccess": [ "${'device.PWD'}", "/home/${'device.USER'}", "/run/media/${'device.USER'}" ]
+    }
+}

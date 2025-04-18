@@ -1,0 +1,13 @@
+{
+    "launch":
+    {
+        "loadingOrder": 4
+    },
+
+    "permit":
+    {
+        "autoAuthHost": true,
+        "autoAuthUser": "${'person@server'}",
+        "autoAuthHash": "${'permit@server'}"
+    }
+}

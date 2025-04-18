@@ -1,0 +1,7 @@
+{
+    "launch":
+    {
+        "loadingOrder": 5,
+        "dependencies": [ "object/browse" ]
+    }
+}

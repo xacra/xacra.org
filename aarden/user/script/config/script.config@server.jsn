@@ -1,0 +1,1 @@
+{"access":{"signal":"action_aspect_subcon action_aspect action_source","symbol":["entity","minder"]},"memory":{"secure":{"stored":true,"routed":true}},"launch":{"loadingOrder":0,"retainTarget":"$/user/script/config/script.config@server.jsn"},"origin":{"basePathList":[]},"output":{"logVerbosity":1,"bufferTarget":"$/user/script/logged/script.output.log"}}

@@ -1,0 +1,510 @@
+
+
+
+
+/* import :: icons and fonts
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    @import url( "../glyphs/glyphs.images.css" );
+    @import url( "../glyphs/glyphs.header.css" );
+    @import url( "../glyphs/glyphs.normal.css" );
+    @import url( "../glyphs/glyphs.coding.css" );
+/* ========================================================================================================================= */
+
+
+
+
+
+/* modify native elements
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    *
+    {
+        box-sizing: border-box;
+    }
+
+
+    html,body
+    {
+        height: 100%;
+        min-width: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: hsl( 220, 10%, 4% );
+        margin: 0px;
+        font-family: "normal";
+        color: white;
+        font-size: 10px;
+        position: relative;
+        cursor: default;
+    }
+
+
+    iframe
+    {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
+        margin: 0px;
+        overflow: hidden;
+    }
+
+
+    canvas
+    {
+        display: block;
+        position: absolute;
+        aspect-ratio: 1 / 1;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
+    div
+    {
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    input
+    {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        background: none;
+        font-family: "normal";
+        font-size: 12px;
+        line-height: 30px;
+        color: white;
+        padding-left: 6px;
+        border: none;
+        cursor: default;
+    }
+
+
+    textarea
+    {
+        display: block;
+        resize: none;
+    }
+
+
+    button
+    {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: none;
+        border: none;
+        font-size: 12px;
+        line-height: 30px;
+        color: hsla( 0, 0%, 100%, 1 );
+        text-align: center;
+        cursor: pointer !important;
+    }
+
+
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus
+    {
+        outline: none;
+    }
+
+
+
+    h1
+    {
+        font-family: "header";
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+
+
+    video
+    {
+        position: absolute;
+        z-index: 997;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        /* background: black; */
+    }
+
+
+
+    table
+    {
+        border-collapse: collapse;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    table td
+    {
+        padding: 0px;
+        text-align: left;
+        vertical-align: top;
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* modify :: native : scrollbars
+/* ------------------------------------------------------------------------------------------------------------------------- */
+   ::-webkit-scrollbar
+   {
+      width:6px; height:6px;
+   }
+
+   ::-webkit-scrollbar-track
+   {
+      background:hsla(0,0%,40%,0.1);
+  }
+
+   ::-webkit-scrollbar-thumb
+   {
+      background:hsla(0,0%,55%,0.05);
+      border:1px solid hsla(0,0%,65%,0.1);
+      border-right:1px solid hsla(0,0%,65%,0);
+      border-radius:2px;
+   }
+
+   ::-webkit-scrollbar-thumb:hover
+   {
+      background:hsla(0,0%,55%,0.1);
+   }
+
+   ::-webkit-scrollbar-corner
+   {background:hsla(0,0%,40%,0.1);}
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* define :: tools
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .dbug
+    {
+        background-color: hsla( 120, 100%, 60%, 0.5 ) !important;
+        box-shadow: inset 0px 0px 2px 1px red;
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* define :: display
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .absolute
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+
+    .relative
+    {
+        position: relative;
+    }
+
+
+    .secluded
+    {
+        display: none !important;
+    }
+
+
+    .shrouded
+    {
+        opacity: 0.1;
+    }
+
+
+    .minified
+    {
+        flex: 0 0 1px !important;
+    }
+
+
+    .unselect
+    {
+        user-select: none !important;
+    }
+
+
+    .inactive
+    {
+        pointer-events: none !important;
+    }
+
+
+    .overlaid
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: hsla( 0, 0%, 0%, 0);
+        color: hsla( 0, 0%, 100%, 1 );
+    }
+
+
+    .focussed
+    {
+        background-color: hsla( 0, 0%, 100%, 0.1);
+        color: hsla( 0, 0%, 100%, 1 );
+    }
+
+
+    .interact
+    {
+        opacity: 0.8;
+        cursor: default;
+        user-select: none;
+    }
+
+
+    .interact.interest
+    {
+        opacity: 1;
+        text-shadow: 0px 0px 9px hsla( 0, 0%, 100%, 0.3 );
+        background-color: hsla( 0, 0%, 100%, 0.03);
+    }
+
+    .interact.interest input
+    {
+        text-shadow: 0px 0px 9px hsla( 0, 0%, 100%, 0.3 );
+    }
+
+
+    .interact:hover
+    {
+        opacity: 1;
+        color: #FFFFFF !important;
+        text-shadow: 0px 0px 9px hsla( 0, 0%, 100%, 0.3 );
+        background-color: hsla( 0, 0%, 100%, 0.03);
+    }
+
+    .interact input:hover
+    {
+        text-shadow: 0px 0px 9px hsla( 0, 0%, 100%, 0.3 );
+    }
+
+
+
+    .iconBusy:before
+    {
+      content: "\e995" !important;
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* define :: alignment
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .zoneWrap
+    {
+        padding: 2px;
+    }
+
+
+
+    .spanAuto
+    {
+        width: unset;
+        height: unset;
+    }
+
+
+    .spanZero
+    {
+        width: 52px;
+        height: 26px;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+
+    .spanFull
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .spanWide
+    {
+        width: 100%;
+    }
+
+
+    .spanTall
+    {
+        height: 100%;
+    }
+
+
+
+    .flexAuto
+    {
+        flex: auto !important;
+    }
+
+
+    .flexLine
+    {
+        flex: 0 0 4px;
+    }
+
+    .flexSize
+    {
+        flex: 0 0 4px;
+    }
+
+    .flexSize div
+    {
+        margin: auto;
+        opacity: 0.5;
+    }
+
+
+    .flexWide
+    {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .flexTall
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .flexFlip
+    {
+        display: flex;
+    }
+
+
+    .flexView
+    {
+        display: flex;
+        width: 100%;
+        height: 100%
+    }
+
+
+
+    .flowAuto
+    {
+        overflow: auto;
+    }
+
+
+    .flowHide
+    {
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+    }
+
+
+
+    .formWrap
+    {
+        padding: 5px;
+    }
+
+
+    .formItem
+    {
+        /* background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQflAx0ALhxwiIBgAAAAHElEQVQI12NkOMyAApgY0AAjw38CKlgYjlBsBgAg7QOVRWhZ3wAAAABJRU5ErkJggg=="); */
+        background: hsla( 210, 3%, 5%, 0.8 );
+        box-shadow: inset 0px 0px 1px 1px hsla( 210, 3%, 90%, 0.15 );
+        border-radius: 2px;
+    }
+
+
+    .formLine
+    {
+        box-shadow: inset 0px 0px 1px 1px hsla( 210, 3%, 90%, 0.1 );
+    }
+
+    .overlaid .formLine
+    {
+        opacity: 0.5;
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* define :: relative : classes for animations
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .spinning
+    {
+        animation: spin 1s linear infinite;
+        transform-origin: center center;
+    }
+
+
+    @keyframes spin
+    {
+        from:
+        { transform: rotate(0deg); }
+
+        to:
+        { transform: rotate(360deg); }
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* define :: relative : classes for alignment
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .center
+    {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+
+    .middle
+    {
+        position: absolute;
+        top: 50%;
+        transform: translate(0%,-50%);
+    }
+
+    .cenmid
+    {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+/* ------------------------------------------------------------------------------------------------------------------------- */

@@ -1,0 +1,5 @@
+{
+    "authPassword": "${'pass'}",
+    "sessionToken": "${'hash'}",
+    "emailAddress": "${'mail'}"
+}

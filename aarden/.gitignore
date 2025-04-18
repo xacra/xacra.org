@@ -1,0 +1,8 @@
+user/script/*
+!user/script/config
+
+user/person/*
+!user/person/config
+
+user/server/*
+!user/server/config

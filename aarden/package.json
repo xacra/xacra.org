@@ -1,0 +1,41 @@
+{
+  "name": "aarden",
+  "version": "1.0.10",
+  "description": "extensible crud-based tool library",
+  "os": [
+    "!win32"
+  ],
+  "main": "./aarden",
+  "type": "module",
+  "scripts": {
+    "invoke": "./aarden",
+    "repack": "./seed/source.repack.mjs",
+    "deploy": "./seed/aarden.bundle.mjs"
+   },
+  "bin": "./aarden",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/menyedari/aarden.git"
+  },
+  "keywords": [
+    "aarden",
+    "hybrid",
+    "client",
+    "server",
+    "driver"
+  ],
+  "author": "Charl <charl.xacra@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/menyedari/aarden/-/issues"
+  },
+  "homepage": "https://gitlab.com/menyedari/aarden/-/wikis/home",
+  "dependencies": {
+  },
+  "directories": {
+    "core": "./core",
+    "demo": "./demo",
+    "docs": "./docs",
+    "pack": "./pack"
+  }
+}

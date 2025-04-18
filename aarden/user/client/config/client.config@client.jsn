@@ -1,0 +1,82 @@
+{
+    "launch":
+    {
+        "folderApplet": "Play"
+    },
+
+
+    "miming":
+    {
+        "application/*":
+        {
+            "symbol": "icon-file-code",
+            "tagged": "script",
+            "aspect": "src",
+            "applet": "Edit"
+        },
+
+
+        "text/css":
+        {
+            "symbol": "icon-file-text2",
+            "tagged": "style",
+            "aspect": "innerHTML",
+            "applet": "Edit"
+        },
+
+
+        "*ml":
+        {
+            "symbol": "icon-code",
+            "tagged": "div",
+            "aspect": "innerHTML",
+            "applet": "Edit"
+        },
+
+
+        "inode/*":
+        {
+            "symbol": "icon-folder",
+            "tagged": "div",
+            "aspect": "innerHTML",
+            "applet": "View",
+            "toggle": true
+        },
+
+
+        "text/*":
+        {
+            "symbol": "icon-file-text2",
+            "tagged": "code",
+            "aspect": "innerHTML",
+            "applet": "Edit"
+        },
+
+
+        "image/*":
+        {
+            "symbol": "icon-image",
+            "tagged": "img",
+            "aspect": "src",
+            "applet": "View"
+        },
+
+
+        "audio/*":
+        {
+            "symbol": "icon-itunes-note",
+            "tagged": "audio",
+            "aspect": "src",
+            "applet": "Play"
+        },
+
+
+        "video/*":
+        {
+            "symbol": "icon-video-camera",
+            "tagged": "video",
+            "aspect": "src",
+            "applet": "Play"
+        }
+    }
+}

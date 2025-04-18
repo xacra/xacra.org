@@ -1,0 +1,320 @@
+
+
+
+
+
+
+/* ornate :: backWall
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    #backWall
+    {
+        background-image: url( "folder.ornate.jpg" );
+        background-size: cover;
+        background-position: center;
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* ornate :: deckWall
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    #deckWall
+    {
+        background-image: url( "screen.effect.png" );
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* ornate :: mainDeck
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    #mainDeck
+    {
+        background-color: hsla( 210, 3%, 6%, 0.4 );
+        min-height: 120px;
+        padding: 4px;
+    }
+
+
+
+    #baseWrap
+    {
+        flex: 1;
+    }
+
+
+
+    #iconDeck
+    {
+        flex: 0 0 30px;
+        /* margin: 2px;
+        margin-bottom: 0px; */
+    }
+
+    #iconDeck button
+    {
+        flex: 1;
+        font-size: 16px;
+        opacity: 0.5;
+    }
+
+    #iconDeck button:hover
+    {
+        opacity: 1;
+    }
+
+
+    #menuDeck
+    {
+        z-index: 1;
+    }
+
+
+
+    #menuDock
+    {
+        flex: 0 0 200px;
+    }
+
+
+    #menuFind
+    {
+        flex: 0 0 30px;
+    }
+
+    #menuFind input
+    {
+        flex: 1 1 0%;
+    }
+
+    #menuFind button
+    {
+        flex: 0 0 30px;
+    }
+
+
+    #viewDeck
+    {
+        flex: 2;
+        /* margin: 2px;
+        margin-bottom: 0px; */
+    }
+
+
+    #toolSize.flexSize
+    {
+        cursor: row-resize;
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* ornate :: toolWrap
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    #toolWrap
+    {
+        flex: 0 0 120px;
+        /* margin: 2px;
+        margin-top: 4px; */
+    }
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* ornate :: listItem
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .listItem
+    {
+        width: 100%;
+    }
+
+
+    .listItem .overlaid
+    {
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+    }
+
+    /* .listItem .overlaid input.interact
+    {
+        height: 24px;
+        font-size: 11px;
+        line-height: 24px;
+        padding-left: 38px;
+        color: hsla( 0, 0%, 100%, 0 ) !important;
+    } */
+
+    .listItem .overlaid .itemWrap
+    {
+        padding: 1px;
+        padding-left: 0px;
+        padding-right: 6px;
+    }
+
+    .listItem .overlaid button.interact
+    {
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 11px;
+        color: hsla( 0, 0%, 40%, 0.8 );
+        background-color: hsla( 210, 3%, 4%, 0.9 );
+        opacity: 1;
+    }
+
+
+    .listItem .itemKids
+    {
+        width: 100%;
+    }
+
+
+
+    .listItem .itemLine
+    {
+        width: 100%;
+        height: 24px;
+    }
+
+    .listItem .itemLine:hover
+    {
+        width: 100%;
+        height: 24px;
+    }
+
+    .listItem .itemLine div
+    {
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+
+
+    .itemLine div.itemTogl
+    {
+        flex: 0 0 16px;
+        font-size: 8px;
+    }
+
+
+    .itemLine .itemIcon
+    {
+        flex: 0 0 16px;
+        font-size: 13px;
+    }
+
+
+    .itemLine .itemText
+    {
+        flex: 1;
+    }
+
+
+    .itemLine .itemText input
+    {
+        flex: 0 0 auto;
+        height: 24px;
+        font-size: 11px;
+        line-height: 24px;
+    }
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* dropDown :: menu-layout
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    .dropMenu
+    {
+        position: absolute;
+        width: 100%;
+        overflow: auto;
+        max-height: 300px;
+        backdrop-filter: blur(2px);
+        z-index: 9999980;
+        background: hsla( 210, 3%, 4%, 0.8 );
+        box-shadow: inset 0px 0px 1px 1px hsla( 210, 3%, 90%, 0.15 ), 0px 0px 8px hsla(0,0%,0%,1);
+        top: 0px;
+    }
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* tilted :: landscape : orientation media query
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    @media (orientation: landscape)
+    {
+        .flexView
+        {
+            flex-direction: row;
+        }
+
+        .flexFlip
+        {
+            flex-direction: column;
+        }
+
+
+        .formLine
+        {
+            flex: 0 0 1px;
+        }
+
+
+        #menuSize.flexSize
+        {
+            cursor: col-resize;
+        }
+    }
+/* ========================================================================================================================= */
+
+
+
+
+
+
+/* tilted :: portrait : orientation media query
+/* ------------------------------------------------------------------------------------------------------------------------- */
+    @media (orientation: portrait)
+    {
+        .flexView
+        {
+            flex-direction: column;
+        }
+
+        .flexFlip
+        {
+            flex-direction: row;
+        }
+
+
+        .formLine
+        {
+            flex: 0 0 1px;
+        }
+
+
+        #menuSize.flexSize
+        {
+            cursor: row-resize;
+        }
+    }
+/* ========================================================================================================================= */

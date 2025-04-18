@@ -1,0 +1,7 @@
+{
+    "permit":
+    {
+        "autoAuthUser": "${'person@client'}",
+        "autoAuthHash": "${'permit@client'}"
+    }
+}

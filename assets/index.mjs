@@ -137,8 +137,10 @@
                 Viewer.canvas.hud.toggle();
 
                 let halted = Viewer.canvas.halted;
+                let action = (halted ? "enclan" : "declan");
 
-                Select( "#overlay" )[ (halted ? "enclan" : "declan") ]( "secluded" );
+                document.body.parentNode[ action ]( "flowHide" );
+                Select( "#overlay" )[ action ]( "secluded" );
                 Screen.canvas.styled( {cursor:(halted ? "grab" : "default")} );
             },
         }

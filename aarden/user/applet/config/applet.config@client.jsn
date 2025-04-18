@@ -1,0 +1,6 @@
+{
+    "launch":
+    {
+        "dependencies": [ "object/browse" ]
+    }
+}

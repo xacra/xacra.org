@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="client.layout.window.css" />
+        <link rel="stylesheet" href="applet.layout.window.css" />
+        <script type="module" src=".mjs" defer ></script>
+    </head>
+    <body>
+        <div class="secluded absolute" id="secluded"></div>
+        <div class="spanFull absolute" id="backWall"></div>
+        <div class="spanFull absolute" id="deckWall"></div>
+        <div class="spanFull absolute flexTall" id="mainDeck">
+            <div id="baseWrap" class="flexView">
+                <div id="iconDeck" class="formItem flexFlip secluded">
+                    <button class="icon-expand" id="toglView"></button><div class="formLine"></div>
+                </div>
+                <div id="menuDock" class="flexView minified">
+                    <div id="spaceFix" class="flexLine secluded"></div>
+                    <div id="menuWrap" class="flexTall flexAuto formItem">
+                        <div id="menuFind" class="flexWide">
+                            <input id="browseIntake" type="text" placeholder="browse" />
+                            <div class="formLine"></div><button class="icon-chevron-down interact"></button>
+                        </div>
+                        <div class="formLine"></div>
+                        <div id="menuDeck" class="flexAuto flowAuto"></div>
+                    </div>
+                </div>
+                <div id="menuSize" class="flexSize" resize="#menuDock" adjust="landscape:width,portrait:height"></div>
+                <div id="viewDeck" class="formItem"></div>
+            </div>
+            <div id="toolSize" class="flexSize" resize="#toolWrap" adjust="locked:height,invert:true"></div>
+            <div id="toolWrap" class="flexTall minified">
+                <div id="toolDeck" class="flexAuto formItem"></div>
+            </div>
+        </div>
+    </body>
+</html>
